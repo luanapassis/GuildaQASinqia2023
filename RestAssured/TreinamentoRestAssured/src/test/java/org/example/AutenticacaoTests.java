@@ -43,7 +43,7 @@ public class AutenticacaoTests {
         String email = flowCadastrarUsuarioParaAutenticar();
 
         JSONObject user = new JSONObject();
-        user.put("email", "teste_q06DE@gmail.com");
+        user.put("email", email);
         user.put("password", "teste");
 
         String token =
@@ -79,7 +79,7 @@ public class AutenticacaoTests {
                 given().
                         baseUri("https://serverest.dev").
                         basePath("/produtos").
-                        header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZV9xMDZERUBnbWFpbC5jb20iLCJpYXQiOjE2OTM5NTcyOTQsImV4cCI6MTY5Mzk1Nzg5NH0._AV-DN0xc-MPhDz0Yo1kM5lPFZlWOVZo5w2yQSG6ZlQ").
+                        header("Authorization", token).
                         contentType(ContentType.JSON).
                         body(produto.toString()).
                         when().
