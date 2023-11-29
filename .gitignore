@@ -15,3 +15,21 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 /src/test/resources/teste_parse
+
+
+playwright-report
+
+node_modules
+.tmp
+.sass-cache
+.DS_Store
+npm-debug.log
+tmp
+.projects
+*.orig
+
+screenshots
+videos
+out.js
+examples/*/cypress/logs
+snapshots.js
